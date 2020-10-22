@@ -58,7 +58,28 @@ namespace DataStructure_LinkedList
                 node.next = head;
             }
             head = node;
-            Console.WriteLine("{ 0} is inserted at the first position", data);
+            Console.WriteLine("{0} is inserted at the first position", data);
         }
+
+        //Insert at the end of Linked list
+        internal void InsertAtLast(int data)
+        {
+            Node node = new Node(data);
+            if (head == null)
+            {
+                head = node;
+            }
+            else
+            {
+                Node temp = head;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = node;
+            }
+            Console.WriteLine("{0} is inserted at the last position", data);
+        }
+
     }
 }

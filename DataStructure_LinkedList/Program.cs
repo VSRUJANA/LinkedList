@@ -27,6 +27,16 @@ namespace DataStructure_LinkedList
             linkedList1.InsertAtFirst(56);
             Console.Write("Linked List : ");
             linkedList1.Display();
+
+            //Insert at last in linked list
+            Console.WriteLine("\n------------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("Inserting at last in Linked list");
+            LinkedList linkedList2 = new LinkedList();
+            linkedList2.Add(56);
+            linkedList2.InsertAtLast(30);
+            linkedList2.InsertAtLast(70);
+            Console.Write("Linked List : ");
+            linkedList2.Display();
         }
     }
 }
