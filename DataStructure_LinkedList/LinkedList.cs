@@ -99,7 +99,7 @@ namespace DataStructure_LinkedList
             int count = Count(head);
             int pos = position;
             Node temp = this.head;
-            if (position < 1||position>count)
+            if (position < 1 || position > count)
             {
                 Console.WriteLine("Invalid Position. Node insertion unsuccessful");
                 return;
@@ -132,8 +132,29 @@ namespace DataStructure_LinkedList
                 Console.WriteLine("Linked list is empty");
                 return;
             }
-            Console.WriteLine(head.data + " is removed from the list");
+            Console.WriteLine("\n"+head.data + " is removed from the list");
             head = head.next;
+        }
+
+        //Delete at the end of Linked list
+        public void DeleteLastNode()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("Linked List is  empty");
+            }
+            else
+            {
+                Node temp = head;
+                Node prev = null;
+                while (temp.next != null)
+                {
+                    prev = temp;
+                    temp = temp.next;
+                }
+                Console.WriteLine("\n"+temp.data + " is removed from the list");
+                prev.next = null;
+            }
         }
 
     }

@@ -55,9 +55,24 @@ namespace DataStructure_LinkedList
             linkedlist4.Add(56);
             linkedlist4.Add(30);
             linkedlist4.Add(70);
+            Console.Write("Linked List : ");
+            linkedlist4.Display();
             linkedlist4.DeleteFirstNode();
             Console.Write("Linked list after deleting first node : ");
             linkedlist4.Display();
+
+            //Delete at end of linked list
+            Console.WriteLine("\n------------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("Deleting at last in Linked list");
+            LinkedList linkedlist5 = new LinkedList();
+            linkedlist5.Add(56);
+            linkedlist5.Add(30);
+            linkedlist5.Add(70);
+            Console.Write("Linked List : ");
+            linkedlist5.Display();
+            linkedlist5.DeleteLastNode();
+            Console.Write("Linked list after deleting last node :  ");
+            linkedlist5.Display();
 
         }
     }
