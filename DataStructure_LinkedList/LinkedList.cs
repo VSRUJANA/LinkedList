@@ -44,5 +44,21 @@ namespace DataStructure_LinkedList
                 temp = temp.next;
             }
         }
+
+        //Insert at the beginning of Linked list
+        internal void InsertAtFirst(int data)
+        {
+            Node node = new Node(data);
+            if (head == null)
+            {
+                node.next = null;
+            }
+            else
+            {
+                node.next = head;
+            }
+            head = node;
+            Console.WriteLine("{ 0} is inserted at the first position", data);
+        }
     }
 }
