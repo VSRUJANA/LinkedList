@@ -124,6 +124,17 @@ namespace DataStructure_LinkedList
             Console.WriteLine("{0} is inserted at position {1}", data, pos);
         }
 
+        //Delete at the beginning of Linked list
+        public void DeleteFirstNode()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("Linked list is empty");
+                return;
+            }
+            Console.WriteLine(head.data + " is removed from the list");
+            head = head.next;
+        }
 
     }
 }

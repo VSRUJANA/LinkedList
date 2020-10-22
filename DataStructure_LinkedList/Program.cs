@@ -48,6 +48,17 @@ namespace DataStructure_LinkedList
             Console.Write("Linked List : ");
             linkedList3.Display();
 
+            //Delete at beginning of linked list
+            Console.WriteLine("\n------------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("Deleting at first in Linked list");
+            LinkedList linkedlist4 = new LinkedList();
+            linkedlist4.Add(56);
+            linkedlist4.Add(30);
+            linkedlist4.Add(70);
+            linkedlist4.DeleteFirstNode();
+            Console.Write("Linked list after deleting first node : ");
+            linkedlist4.Display();
+
         }
     }
 }
