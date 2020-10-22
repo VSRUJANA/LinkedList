@@ -28,7 +28,6 @@ namespace DataStructure_LinkedList
             Console.WriteLine(data + " is inserted into the list");
         }
 
-
         //Display the Linked list
         internal void Display()
         {
@@ -80,6 +79,51 @@ namespace DataStructure_LinkedList
             }
             Console.WriteLine("{0} is inserted at the last position", data);
         }
+
+        //Count number of elements in LinkedList
+        int Count(Node head)
+        {
+            int count = 0;
+            Node temp = this.head;
+            while (temp != null)
+            {
+                count++;
+                temp = temp.next;
+            }
+            return count;
+        }
+
+        //Insert at particular position in Linked list
+        internal void InsertAtParticularPosition(int position, int data)
+        {
+            int count = Count(head);
+            int pos = position;
+            Node temp = this.head;
+            if (position < 1||position>count)
+            {
+                Console.WriteLine("Invalid Position. Node insertion unsuccessful");
+                return;
+            }
+            if (position == 1)
+            {
+                InsertAtFirst(data);
+                return;
+            }
+            while (position-- != 0)
+            {
+                if (position == 1)
+                {
+                    Node node = new Node(data);
+                    node.next = head.next;
+                    head.next = node;
+                    break;
+                }
+                head = head.next;
+            }
+
+            Console.WriteLine("{0} is inserted at position {1}", data, pos);
+        }
+
 
     }
 }

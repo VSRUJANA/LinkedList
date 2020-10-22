@@ -37,6 +37,17 @@ namespace DataStructure_LinkedList
             linkedList2.InsertAtLast(70);
             Console.Write("Linked List : ");
             linkedList2.Display();
+
+            //Insert at particular position in linked list
+            Console.WriteLine("\n------------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("Inserting at particular position in Linked list");
+            LinkedList linkedList3 = new LinkedList();
+            linkedList3.Add(56);
+            linkedList3.Add(70);
+            linkedList3.InsertAtParticularPosition(2, 30);
+            Console.Write("Linked List : ");
+            linkedList3.Display();
+
         }
     }
 }
