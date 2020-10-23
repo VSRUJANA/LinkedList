@@ -132,7 +132,7 @@ namespace DataStructure_LinkedList
                 Console.WriteLine("Linked list is empty");
                 return;
             }
-            Console.WriteLine("\n"+head.data + " is removed from the list");
+            Console.WriteLine("\n" + head.data + " is removed from the list");
             head = head.next;
         }
 
@@ -152,7 +152,7 @@ namespace DataStructure_LinkedList
                     prev = temp;
                     temp = temp.next;
                 }
-                Console.WriteLine("\n"+temp.data + " is removed from the list");
+                Console.WriteLine("\n" + temp.data + " is removed from the list");
                 prev.next = null;
             }
         }
@@ -165,13 +165,32 @@ namespace DataStructure_LinkedList
             {
                 if (temp.data == value)
                 {
-                    Console.WriteLine("\nNode with value {0} is in the list", value);
+                    Console.Write("\nNode with value {0} is in the list. ", value);
                     return temp;
                 }
                 temp = temp.next;
             }
-            Console.WriteLine("\nNode with value {0} is not in the list", value);
+            Console.Write("\nNode with value {0} is not in the list. ", value);
             return null;
+        }
+
+        //Insert after given value in linked list
+        public Node InsertAfterValue(int existingValue, int valueToBeInserted)
+        {
+            Node temp = Search(existingValue);
+            if (temp != null)
+            {
+                Node node = new Node(valueToBeInserted);
+                node.next = temp.next;
+                temp.next = node;
+                Console.Write("Node {0} is inserted after {1}\n", valueToBeInserted, existingValue);
+                return node;
+            }
+            else
+            {
+                Console.Write("Node insertion unsuccessful\n");
+                return null;
+            }
         }
     }
 }

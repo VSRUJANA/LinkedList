@@ -31,5 +31,32 @@ namespace LinkedListTest
             Node node = list.Search(data);
             Assert.AreEqual(null, node);
         }
+
+        [TestMethod]
+        public void GivenNodePresentInTheList_WhenSearcheed_ShouldReturnNodeWithThatValue()
+        {
+            LinkedList list = new LinkedList();
+            list.Add(56);
+            list.Add(30);
+            list.Add(70);
+            int existingnode = 30;
+            int newnode = 40;
+            Node node = list.InsertAfterValue(existingnode,newnode);
+            int expected = newnode;
+            Assert.AreEqual(expected, node.data);
+        }
+
+        [TestMethod]
+        public void GivenNodePresentInTheList_WhenSearrched_ShouldReturnNodeWithThatValue()
+        {
+            LinkedList list = new LinkedList();
+            list.Add(56);
+            list.Add(30);
+            list.Add(70); 
+            int existingnode = 100;
+            int newnode = 40;
+            Node node = list.InsertAfterValue(existingnode, newnode);
+            Assert.AreEqual(null, node);
+        }
     }
 }

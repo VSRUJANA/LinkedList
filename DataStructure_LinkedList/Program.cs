@@ -81,6 +81,13 @@ namespace DataStructure_LinkedList
             list.Display();
             list.Search(56);
 
+            Console.WriteLine("\n------------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("Insert after given value in Linked list");
+            Console.Write("Linked List : ");
+            list.Display();
+            list.InsertAfterValue(30, 40);
+            Console.Write("Linked List : ");
+            list.Display();
         }
     }
 }
