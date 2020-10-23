@@ -74,6 +74,13 @@ namespace DataStructure_LinkedList
             Console.Write("Linked list after deleting last node :  ");
             linkedlist5.Display();
 
+            //Search for a node in linked list
+            Console.WriteLine("\n------------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("Searching in Linked list");
+            Console.Write("Linked List : ");
+            list.Display();
+            list.Search(56);
+
         }
     }
 }

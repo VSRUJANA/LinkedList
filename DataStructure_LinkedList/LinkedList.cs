@@ -4,12 +4,12 @@ using System.Text;
 
 namespace DataStructure_LinkedList
 {
-    class LinkedList
+    public class LinkedList
     {
-        internal Node head;
+        public Node head;
 
         //Create a simple Linked list
-        internal void Add(int data)
+        public void Add(int data)
         {
             Node node = new Node(data);
             if (head == null)
@@ -29,7 +29,7 @@ namespace DataStructure_LinkedList
         }
 
         //Display the Linked list
-        internal void Display()
+        public void Display()
         {
             Node temp = head;
             if (temp == null)
@@ -45,7 +45,7 @@ namespace DataStructure_LinkedList
         }
 
         //Insert at the beginning of Linked list
-        internal void InsertAtFirst(int data)
+        public void InsertAtFirst(int data)
         {
             Node node = new Node(data);
             if (head == null)
@@ -61,7 +61,7 @@ namespace DataStructure_LinkedList
         }
 
         //Insert at the end of Linked list
-        internal void InsertAtLast(int data)
+        public void InsertAtLast(int data)
         {
             Node node = new Node(data);
             if (head == null)
@@ -94,7 +94,7 @@ namespace DataStructure_LinkedList
         }
 
         //Insert at particular position in Linked list
-        internal void InsertAtParticularPosition(int position, int data)
+        public void InsertAtParticularPosition(int position, int data)
         {
             int count = Count(head);
             int pos = position;
@@ -157,5 +157,21 @@ namespace DataStructure_LinkedList
             }
         }
 
+        //Search node in the linked list
+        public Node Search(int value)
+        {
+            Node temp = this.head;
+            while (temp != null)
+            {
+                if (temp.data == value)
+                {
+                    Console.WriteLine("\nNode with value {0} is in the list", value);
+                    return temp;
+                }
+                temp = temp.next;
+            }
+            Console.WriteLine("\nNode with value {0} is not in the list", value);
+            return null;
+        }
     }
 }

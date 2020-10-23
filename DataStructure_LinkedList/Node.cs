@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DataStructure_LinkedList
 {
-    class Node
+    public class Node
     {
         public int data;
         public Node next;
