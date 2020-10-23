@@ -81,12 +81,22 @@ namespace DataStructure_LinkedList
             list.Display();
             list.Search(56);
 
+            //Insert a node after given value
             Console.WriteLine("\n------------------------------------------------------------------------------------------------------------------------");
             Console.WriteLine("Insert after given value in Linked list");
             Console.Write("Linked List : ");
             list.Display();
             list.InsertAfterValue(30, 40);
             Console.Write("Linked List : ");
+            list.Display();
+
+            //Delete a node with given value
+            Console.WriteLine("\n------------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("Delete a node with given value in Linked list");
+            Console.Write("Linked List : ");
+            list.Display();
+            list.DeleteNodeWithGivenValue(40);
+            Console.Write("Final Linked List : ");
             list.Display();
         }
     }

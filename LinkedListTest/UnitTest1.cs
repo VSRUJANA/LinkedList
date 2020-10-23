@@ -58,5 +58,20 @@ namespace LinkedListTest
             Node node = list.InsertAfterValue(existingnode, newnode);
             Assert.AreEqual(null, node);
         }
+
+        [TestMethod]
+        public void GivenALinkedList_WhenDeletingANodeWithGivenValue_ShouldPassLinkedListResult()
+        {
+            LinkedList list = new LinkedList();
+            list.Add(56);
+            list.Add(30);
+            list.Add(40);
+            list.Add(70);
+            list.DeleteNodeWithGivenValue(40);
+            Node node = list.Search(40);
+            Node expected = null;
+            Assert.AreEqual(expected, node);
+        }
+
     }
 }

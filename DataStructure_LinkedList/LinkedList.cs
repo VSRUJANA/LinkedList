@@ -192,5 +192,28 @@ namespace DataStructure_LinkedList
                 return null;
             }
         }
+
+        //Delete a node with given value
+        public void DeleteNodeWithGivenValue(int data)
+        {
+            Node delete = Search(data);
+            Node temp = this.head;
+            if (delete == null)
+            {
+                Console.WriteLine("Node with given value doesn't exist in the list");
+                return;
+            }
+            else
+            {
+                while (temp.next != delete)
+                {
+                    temp = temp.next;
+                }
+                temp.next = delete.next;
+                Console.WriteLine(data + " deleted successfully");
+                Console.WriteLine("Size of the linked list is "+ Count(head));
+                return;
+            }
+        }
     }
 }
